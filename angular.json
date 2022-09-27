@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "sopra-chat": "apps/sopra-chat",
+    "sopra-chat-e2e": "apps/sopra-chat-e2e"
+  }
+}
