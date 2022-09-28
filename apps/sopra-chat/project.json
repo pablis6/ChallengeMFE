@@ -25,7 +25,8 @@
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/sopra-chat/webpack.config.js"
-        }
+        },
+        "commonChunk": false
       },
       "configurations": {
         "production": {
@@ -64,7 +65,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/angular:module-federation-dev-server",
+      "executor": "@nrwl/angular:webpack-server",
       "configurations": {
         "production": {
           "browserTarget": "sopra-chat:build:production"
@@ -80,9 +81,10 @@
       }
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "ngx-build-plus:extract-i18n",
       "options": {
-        "browserTarget": "sopra-chat:build"
+        "browserTarget": "sopra-chat:build",
+        "extraWebpackConfig": "apps/sopra-chat/webpack.config.js"
       }
     },
     "lint": {

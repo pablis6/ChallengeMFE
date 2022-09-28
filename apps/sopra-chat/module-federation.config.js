@@ -1,4 +1,4 @@
 module.exports = {
   name: 'sopra-chat',
-  remotes: [],
+  remotes: ['login-form'],
 };
