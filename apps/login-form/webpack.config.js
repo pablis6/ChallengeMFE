@@ -29,11 +29,12 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        // name: "loginForm",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './apps/login-form/src/app/app.component.ts',
-        // },        
+        name: "loginForm",
+        filename: "remoteEntry.js",
+        exposes: {
+            './Component': './apps/login-form/src/app/remote-entry/remote-entry.component.ts',
+            './Module': './apps/login-form/src/app/remote-entry/remote-entry.module.ts',
+        },        
         
         // For hosts (please adjust)
         // remotes: {
